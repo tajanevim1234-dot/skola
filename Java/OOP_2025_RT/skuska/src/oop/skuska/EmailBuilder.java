@@ -44,13 +44,13 @@ public class EmailBuilder implements EmailBuilderInterface {
 
     @Override
     public Email build() throws EmailNotBuildableException {
-        Email email = new Email(sender, receiver, subject, content, attachment);
-
+        
         if (sender == null || receiver == null || content == null) {
             reset();
             throw new EmailNotBuildableException("Email must have sender, receiver and content");
         }
-
+        
+        Email email = new Email(sender, receiver, subject, content, attachment);
         reset();
         return email;
     }
