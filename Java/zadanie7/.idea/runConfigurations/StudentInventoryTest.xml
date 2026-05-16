@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="StudentInventoryTest" type="JUnit" factoryName="JUnit">
+    <module name="zadanie7" />
+    <option name="PACKAGE_NAME" value="oop.zadanie7" />
+    <option name="MAIN_CLASS_NAME" value="oop.zadanie7.StudentInventoryTest" />
+    <option name="TEST_OBJECT" value="class" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

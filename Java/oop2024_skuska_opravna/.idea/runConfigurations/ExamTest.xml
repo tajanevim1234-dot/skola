@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ExamTest" type="JUnit" factoryName="JUnit">
+    <module name="oop2024_skuska_opravna" />
+    <option name="PACKAGE_NAME" value="sk.stuba.fei.uim.oop" />
+    <option name="MAIN_CLASS_NAME" value="sk.stuba.fei.uim.oop.ExamTest" />
+    <option name="TEST_OBJECT" value="class" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
