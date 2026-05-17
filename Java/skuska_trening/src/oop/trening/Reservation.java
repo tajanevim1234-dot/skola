@@ -32,14 +32,23 @@ public abstract class Reservation implements Comparable<Reservation> {
 
     @Override
     public int compareTo(Reservation other) {
-        if(this.code.equals(other.code)){
-            return 1;
-        }
-        return 0;
+        return this.code.compareTo(other.code);
     }
 
     @Override
-    public int HashCode(Reservation other){
-        return other.code;
+    public int hashCode() {
+        return this.code.hashCode();
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Reservation other)) {
+            return false;
+        }
+        return this.code.equals(other.code);
+    }
+
 }

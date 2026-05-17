@@ -6,7 +6,9 @@ public class Invoice {
     private double total;
 
     Invoice(String customer, String content, double total) {
-        // TODO
+        this.customer=customer;
+        this.content=content;
+        this.total=total;
     }
 
     public String getCustomer() {

@@ -8,10 +8,14 @@ public class TripInvoiceDirector {
     }
 
     public void createReservationInvoice(Reservation reservation) {
-        // TODO
+        builder.setCustomer(reservation.getCustomerName());
+        builder.setContent("Reservation " + reservation.getCode() + " for " + reservation.getCustomerName());
+        builder.setTotal(reservation.getPrice());
     }
 
     public void createUpgradeInvoice(FlightReservation reservation) {
-        // TODO
+        builder.setCustomer(reservation.getCustomerName());
+        builder.setContent("Upgrade for flight " + reservation.getCode() + " to " + reservation.getSeatClass());
+        builder.setTotal(reservation.getPrice());
     }
 }

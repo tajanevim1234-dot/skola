@@ -5,7 +5,7 @@ public class HotelReservation extends Reservation {
 
     public HotelReservation(String code, String customerName, double price, int nights) {
         super(code, customerName, price);
-        // TODO
+        this.nights=nights;
     }
 
     public int getNights() {

@@ -5,7 +5,7 @@ public class FlightReservation extends Reservation implements Upgradable {
 
     public FlightReservation(String code, String customerName, double price, String seatClass) {
         super(code, customerName, price);
-        // TODO
+        this.seatClass=seatClass;
     }
 
     public String getSeatClass() {
@@ -14,6 +14,12 @@ public class FlightReservation extends Reservation implements Upgradable {
 
     @Override
     public void upgrade() {
-        // TODO
+        if(this.seatClass.equals("economy")){
+            this.seatClass="business";
+            this.setPrice(this.getPrice()+150);
+        }else if (this.seatClass.equals("business")){
+            this.seatClass="first";
+            this.setPrice(this.getPrice()+300);
+        } 
     }
 }
