@@ -6,22 +6,46 @@ public class WatchApplication {
     private boolean startableFromLockScreen;
 
     public WatchApplication(String name) {
-        // TODO
+        this.name=name;
+        this.canInstallApplication=false;
+        this.startableFromLockScreen=false;
     }
 
     public WatchApplication(String name, boolean canInstallApplication, boolean startableFromLockScreen) {
-        // TODO
+        this.name=name;
+        this.canInstallApplication=canInstallApplication;
+        this.startableFromLockScreen=startableFromLockScreen;
     }
 
     public String getName() {
-        return null;
+        return this.name;
     }
 
     public boolean canInstallApplication() {
-        return false;
+        return this.canInstallApplication;
     }
 
     public boolean startableFromLockScreen() {
-        return false;
+        return this.startableFromLockScreen;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (!(obj instanceof WatchApplication other)) {
+            return false;
+        }
+
+        return this.name.equals(other.name)
+                && this.canInstallApplication == other.canInstallApplication
+                && this.startableFromLockScreen == other.startableFromLockScreen;
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(name, canInstallApplication, startableFromLockScreen);
     }
 }

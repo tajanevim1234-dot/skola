@@ -7,11 +7,17 @@ class WaitingForPin extends State {
 
     @Override
     void pinEntered(String pin) {
-        // TODO
+        if(pin.equals("1111")){
+            watch.setState(new Menu(watch));
+        }
     }
 
     @Override
     void start(WatchApplication application) {
-        // TODO
+        if (watch.getInstalledApplications().contains(application) && application.startableFromLockScreen()) {
+            watch.setRunningFromLockScreen(true);
+            watch.setRunningApplication(application);
+            watch.setState(new ActivityRunning(watch));
+        }
     }
 }

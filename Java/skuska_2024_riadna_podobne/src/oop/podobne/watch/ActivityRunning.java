@@ -7,16 +7,24 @@ class ActivityRunning extends State {
 
     @Override
     void sideButtonPressed() {
-        // TODO
+        watch.setRunningApplication(null);
+        watch.setState(new Off(watch));
     }
 
     @Override
     void backButtonPressed() {
-        // TODO
+        watch.setRunningApplication(null);
+        if(watch.isRunningFromLockScreen()){
+            watch.setState(new Off(watch));
+        }else{
+            watch.setState(new Menu(watch));
+        }
     }
 
     @Override
     void install(WatchApplication application) {
-        // TODO
+        if(watch.getRunningApplication().canInstallApplication()){
+            watch.addInstalledApplication(application);
+        }
     }
 }

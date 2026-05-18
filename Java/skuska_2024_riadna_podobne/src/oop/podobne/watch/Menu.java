@@ -7,16 +7,23 @@ class Menu extends State {
 
     @Override
     void sideButtonPressed() {
-        // TODO
+        watch.setRunningApplication(null);
+        watch.setState(new Off(watch));
     }
 
     @Override
     void start(WatchApplication application) {
-        // TODO
+        if(watch.getInstalledApplications().contains(application)){
+            watch.setRunningApplication(application);
+            watch.setRunningFromLockScreen(false);
+            watch.setState(new ActivityRunning(watch));
+        }
     }
 
     @Override
     void uninstall(WatchApplication application) {
-        // TODO
+        if(watch.getInstalledApplications().contains(application)){
+            watch.removeInstalledApplication(application);
+        }
     }
 }

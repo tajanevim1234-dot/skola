@@ -11,35 +11,38 @@ public class SmartWatch {
 
     public SmartWatch() {
         this.installedApplications = new ArrayList<>();
-        // TODO
+        installedApplications.add(new WatchApplication("Store",true,false));
+        installedApplications.add(new WatchApplication("Timer",false,true));
+        installedApplications.add(new WatchApplication("Weather", false, false));
+        this.state= new Off(this);
     }
 
     public void sideButtonPressed() {
-        // TODO
+        state.sideButtonPressed();
     }
 
     public void backButtonPressed() {
-        // TODO
+        state.backButtonPressed();
     }
 
     public void pinEntered(String pin) {
-        // TODO
+        state.pinEntered(pin);
     }
 
     public void start(WatchApplication application) {
-        // TODO
+        state.start(application);
     }
 
     public void install(WatchApplication application) {
-        // TODO
+        state.install(application);
     }
 
     public void uninstall(WatchApplication application) {
-        // TODO
+        state.uninstall(application);
     }
 
     public String getStateName() {
-        return null;
+        return state.getName();
     }
 
     public WatchApplication getRunningApplication() {
@@ -64,5 +67,13 @@ public class SmartWatch {
 
     void setRunningFromLockScreen(boolean runningFromLockScreen) {
         this.runningFromLockScreen = runningFromLockScreen;
+    }
+
+    void addInstalledApplication(WatchApplication application) {
+        installedApplications.add(application);
+    }
+
+    void removeInstalledApplication(WatchApplication application) {
+        installedApplications.remove(application);
     }
 }
