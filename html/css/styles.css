@@ -1,3 +1,58 @@
+/* Local Poppins: basic Latin and extended Latin for Slovak characters. */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins-latin-400-normal.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins-latin-ext-400-normal.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0100-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins-latin-700-normal.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins-latin-ext-700-normal.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    unicode-range: U+0100-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins-latin-400-italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins-latin-ext-400-italic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0100-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 :root {
     --color-brand: #173b50;
     --color-brand-light: #e6eff4;
@@ -23,7 +78,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Georgia, serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--color-text);
     background: var(--color-background);
@@ -539,7 +594,7 @@ fieldset:disabled .map-button {
     color: var(--color-surface);
     background: var(--color-accent);
     box-shadow: 0 2px 8px var(--color-shadow);
-    font: bold 1rem/1 Georgia, serif;
+    font: bold 1rem/1 'Poppins', sans-serif;
     cursor: pointer;
 }
 

@@ -10,6 +10,14 @@ Osobny web RH vytvoreny pomocou HTML, CSS a JavaScriptu.
 - Suradnice skoly a ukazkoveho domova su na zaciatku `js/map.js`.
 - Mapa a pocasie vyzaduju internetove pripojenie. Projekt je vhodne otvorit cez lokalny HTTP server, napriklad Live Server.
 
+## Lokalne pismo
+
+- Web pouziva **Poppins**, lokalne nacitany cez `@font-face` v `css/styles.css`. Pri zobrazeni stranky sa font nestahuje z externej sluzby.
+- Subory `.woff2` v `fonts/` obsahuju bezny rez (400), tucny rez (700) a kurzivu (400), vzdy vo variantoch Latin a Latin Extended pre slovensku diakritiku.
+- Autor: Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins).
+- Licencia: **SIL Open Font License 1.1**. Plne znenie je prilozene v [fonts/OFL-Poppins.txt](fonts/OFL-Poppins.txt).
+- Zdroj WOFF2 suborov: balicek `@fontsource/poppins`, verzia `5.2.7` (https://www.npmjs.com/package/@fontsource/poppins/v/5.2.7). Odkazy v tejto dokumentacii sluzia iba na uvedenie zdroja.
+
 ## Zdroje
 
 - `img/workspace.jpg`: fotografia vlastneho pracovneho stola dodana autorom webu (povodny subor `img/Moj stol.jpg`). Fotografia nebola generovana ani upravovana pomocou AI.
