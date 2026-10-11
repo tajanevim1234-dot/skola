@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Miesta, kde ma môžete nájsť.">
+    <title>Kde ma nájdete | RH</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/nav.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="../js/map.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Preskočiť na obsah</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="monogram" href="../index.html" aria-label="RH – úvodná stránka">RH</a>
+            <div>
+                <p class="site-name">RH</p>
+                <p class="site-slogan">Vitajte na mojej osobnej webovej vizitke.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Hlavná navigácia">
+        <div class="container">
+            <button class="menu-toggle" type="button" aria-controls="main-menu" aria-expanded="true" hidden>
+                <span aria-hidden="true">☰</span> Menu
+            </button>
+            <ul class="nav-list" id="main-menu">
+                <li><a class="nav-link" href="../index.html">Profil</a></li>
+                <li><a class="nav-link" href="../pages/cv.html">Životopis</a></li>
+                <li><a class="nav-link" href="../pages/workspace.html">Pracovné prostredie</a></li>
+                <li><a class="nav-link" href="../pages/schedule.html">Kedy ma zastihnete</a></li>
+                <li><a class="nav-link" href="../pages/map.html" aria-current="page">Kde ma nájdete</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content" id="main-content" tabindex="-1">
+        <h1>Kde ma nájdete</h1>
+        <p>Študujem na FEI STU v Bratislave. Na mape je moja škola a ukážkový domov
+            v Karlovej Vsi. Poloha domova je fiktívna.</p>
+
+        <section class="weather-panel" aria-labelledby="weather-heading">
+            <h2 id="weather-heading">Počasie pri mojej škole</h2>
+            <p id="weather" role="status">Načítavam teplotu a rýchlosť vetra…</p>
+            <button class="map-button" id="weather-retry" type="button" hidden>Skúsiť znova</button>
+            <p>Údaje o počasí: <a href="https://open-meteo.com/">Open-Meteo</a>.</p>
+        </section>
+
+        <section aria-labelledby="map-heading">
+            <h2 id="map-heading">Moja škola, domov a vaše miesta</h2>
+            <p id="map-help">Kliknite na mapu, napíšte názov miesta a stlačte „Pridať bod“.
+                Súradnice môžete zadať aj ručne. Potom vyberte uložený bod a cieľ — školu alebo domov.</p>
+            <p id="map-status" role="status">Načítavam mapu…</p>
+            <div id="map" role="region" aria-label="Mapa školy, domova a pridaných miest" aria-describedby="map-help"></div>
+
+            <div class="map-controls">
+                <form id="point-form">
+                    <fieldset id="point-fields" disabled>
+                        <legend>Pridať miesto</legend>
+                        <label for="point-name">Názov miesta</label>
+                        <input id="point-name" name="point-name" type="text" maxlength="60" required placeholder="Napríklad knižnica">
+                        <div class="coordinate-fields">
+                            <div>
+                                <label for="point-latitude">Zemepisná šírka</label>
+                                <input id="point-latitude" name="latitude" type="number" min="-90" max="90" step="any" required placeholder="48.15">
+                            </div>
+                            <div>
+                                <label for="point-longitude">Zemepisná dĺžka</label>
+                                <input id="point-longitude" name="longitude" type="number" min="-180" max="180" step="any" required placeholder="17.07">
+                            </div>
+                        </div>
+                        <button class="map-button" type="submit">Pridať bod</button>
+                    </fieldset>
+                </form>
+
+                <div>
+                    <fieldset id="distance-fields" disabled>
+                        <legend>Vzdialenosť do cieľa</legend>
+                        <label for="point-select">Uložený bod</label>
+                        <select id="point-select"><option value="">Najprv pridajte bod</option></select>
+                        <label for="target-select">Cieľ</label>
+                        <select id="target-select">
+                            <option value="school">Moja škola — FEI STU</option>
+                            <option value="home">Môj domov — fiktívna poloha</option>
+                        </select>
+                        <button class="map-button" id="delete-point" type="button">Odstrániť vybraný bod</button>
+                    </fieldset>
+                    <p id="distance-result" role="status">Zatiaľ nemáte uložené žiadne body. Pridajte prvé miesto kliknutím na mapu alebo zadaním súradníc.</p>
+                    <p>Počítam vzdušnú vzdialenosť, nie dĺžku cesty autom či pešo.</p>
+                </div>
+            </div>
+            <p id="storage-status" role="status">Pridané miesta si tento prehliadač zapamätá aj po obnovení stránky.</p>
+            <noscript><p>Na mapu, pridávanie bodov a načítanie počasia potrebujete zapnutý JavaScript.</p></noscript>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <address>
+                Napíšte mi: <a href="mailto:rh@example.com">rh@example.com</a>
+            </address>
+            <p>© 2026 RH</p>
+            <p>Mapa: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> ·
+                <a href="https://leafletjs.com/">Leaflet</a> ·
+                Počasie: <a href="https://open-meteo.com/">Open-Meteo</a></p>
+        </div>
+    </footer>
+</body>
+</html>

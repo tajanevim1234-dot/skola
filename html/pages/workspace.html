@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ako a kde pracujem.">
+    <title>Pracovné prostredie | RH</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/nav.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Preskočiť na obsah</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="monogram" href="../index.html" aria-label="RH – úvodná stránka">RH</a>
+            <div>
+                <p class="site-name">RH</p>
+                <p class="site-slogan">Vitajte na mojej osobnej webovej vizitke.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Hlavná navigácia">
+        <div class="container">
+            <button class="menu-toggle" type="button" aria-controls="main-menu" aria-expanded="true" hidden>
+                <span aria-hidden="true">☰</span> Menu
+            </button>
+            <ul class="nav-list" id="main-menu">
+                <li><a class="nav-link" href="../index.html">Profil</a></li>
+                <li><a class="nav-link" href="../pages/cv.html">Životopis</a></li>
+                <li><a class="nav-link" href="../pages/workspace.html" aria-current="page">Pracovné prostredie</a></li>
+                <li><a class="nav-link" href="../pages/schedule.html">Kedy ma zastihnete</a></li>
+                <li><a class="nav-link" href="../pages/map.html">Kde ma nájdete</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content" id="main-content" tabindex="-1">
+        <h1>Pracovné prostredie</h1>
+        <p>Pri tvorbe webu prepájam HTML, CSS a JavaScript. Takto vyzerá môj pracovný stôl, pri ktorom sa učím a pracujem na zadaniach.</p>
+        <p id="hotspot-help">Prejdi myšou na očíslovaný bod, ťukni naň alebo ho vyber klávesom Tab.</p>
+        <figure class="workspace-figure" aria-describedby="hotspot-help">
+            <div class="hotspot-image">
+                <img src="../img/workspace.jpg" alt="Môj pracovný stôl s notebookom, dvoma monitormi, oranžovým krúžkom na stláčanie, liekmi na alergiu a myšami." width="4000" height="3000">
+                <div class="hotspot hotspot--left" style="--x: 56%; --y: 64%">
+                    <button class="hotspot__dot" type="button" aria-label="1. Notebook – HTML, CSS a JavaScript" aria-describedby="laptop-panel">1</button>
+                    <div class="hotspot__panel" id="laptop-panel"><h2>Notebook – HTML, CSS a JavaScript</h2><p>Na notebooku píšem kód vo Visual Studio Code. Učím sa tu HTML, CSS a JavaScript a postupne skladám tento web.</p></div>
+                </div>
+                <div class="hotspot hotspot--left" style="--x: 56%; --y: 31%">
+                    <button class="hotspot__dot" type="button" aria-label="2. Monitor" aria-describedby="monitor-panel">2</button>
+                    <div class="hotspot__panel" id="monitor-panel"><h2>Monitor</h2><p>K notebooku mám pripojený veľký monitor. Vďaka ďalšej obrazovke mám viac priestoru pri práci na webe.</p></div>
+                </div>
+                <div class="hotspot" style="--x: 27%; --y: 71%">
+                    <button class="hotspot__dot" type="button" aria-label="3. Pomôcka na stláčanie" aria-describedby="grip-panel">3</button>
+                    <div class="hotspot__panel" id="grip-panel"><h2>Pomôcka na stláčanie</h2><p>Na stole mám aj oranžový krúžok na stláčanie. Je to malá pomôcka, ktorú mám pri práci poruke.</p></div>
+                </div>
+                <div class="hotspot" style="--x: 4.7%; --y: 82.5%">
+                    <button class="hotspot__dot" type="button" aria-label="4. Lieky na alergiu" aria-describedby="allergy-panel">4</button>
+                    <div class="hotspot__panel" id="allergy-panel"><h2>Lieky na alergiu</h2><p>Na ľavej strane stola mám položené aj svoje lieky na alergiu. Aj takéto drobnosti patria k môjmu pracovnému prostrediu.</p></div>
+                </div>
+                <div class="hotspot hotspot--left" style="--x: 85%; --y: 86%">
+                    <button class="hotspot__dot" type="button" aria-label="5. Myš" aria-describedby="mouse-panel">5</button>
+                    <div class="hotspot__panel" id="mouse-panel"><h2>Myš</h2><p>Vedľa notebooku mám myš na ovládanie počítača. Pri tvorbe webu však skúšam aj ovládanie klávesnicou.</p></div>
+                </div>
+            </div>
+            <figcaption>Môj pracovný stôl. <a href="../img/workspace.jpg">Zobraziť pôvodnú fotografiu.</a></figcaption>
+        </figure>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <address>
+                Napíšte mi: <a href="mailto:rh@example.com">rh@example.com</a>
+            </address>
+            <p>© 2026 RH</p>
+        </div>
+    </footer>
+</body>
+</html>

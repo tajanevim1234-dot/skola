@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Som RH a učím sa tvoriť webové stránky pomocou HTML, CSS a JavaScriptu. Spoznajte môj profil a to, na čom pracujem.">
+    <title>Profil | RH</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/nav.js" defer></script>
 </head>
 <body>
-    <h1>HEllo wOrLd</h1>
+    <a class="skip-link" href="#main-content">Preskočiť na obsah</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="monogram" href="index.html" aria-label="RH - úvodná stránka">RH</a>
+            <div>
+                <p class="site-name">RH</p>
+                <p class="site-slogan">Vitajte na mojej osobnej webovej vizitke.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Hlavná navigácia">
+        <div class="container">
+            <button class="menu-toggle" type="button" aria-controls="main-menu" aria-expanded="true" hidden>
+                <span aria-hidden="true">☰</span> Menu
+            </button>
+            <ul class="nav-list" id="main-menu">
+                <li><a class="nav-link" href="index.html" aria-current="page">Profil</a></li>
+                <li><a class="nav-link" href="pages/cv.html">Životopis</a></li>
+                <li><a class="nav-link" href="pages/workspace.html">Pracovné prostredie</a></li>
+                <li><a class="nav-link" href="pages/schedule.html">Kedy ma zastihnete</a></li>
+                <li><a class="nav-link" href="pages/map.html">Kde ma nájdete</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content" id="main-content" tabindex="-1">
+        <h1>Som Riško a učím sa tvoriť weby.</h1>
+
+        <section class="profile-intro" aria-labelledby="about-heading">
+            <img class="profile-image" src="img/John_pork_flag_oikee.png"
+                 alt="Ilustrácia Johna Porka"
+                 width="520" height="520" loading="lazy">
+            <h2 id="about-heading">Niečo o mne</h2>
+            <p>Vitajte na mojej osobnej stránke. Postupne sa učím, ako z obyčajného
+                textu a niekoľkých značiek vznikne funkčný web. HTML už začínam rozumieť,
+                pri CSS a JavaScripte objavujem, ako spolu súvisia vzhľad a správanie stránky.</p>
+            <p>Chcem vedieť vysvetliť kód, ktorý používam, a vedieť si ho upraviť aj sám.
+                Preto postupujem po menších krokoch: niečo vytvorím, vyskúšam a potom
+                vylepším. Namiesto portrétu ma tu zatiaľ zastupuje John Pork —
+                nech má táto vizitka aj trochu sladšiu stránku.</p>
+        </section>
+
+        <section class="profile-skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Tri veci, na ktorých pracujem</h2>
+            <ul>
+                <li><strong>HTML:</strong> skladám obsah stránky a učím sa používať správne značky.</li>
+                <li><strong>CSS:</strong> skúšam farby, rozloženie a prispôsobenie stránky mobilu.</li>
+                <li><strong>JavaScript:</strong> zisťujem, ako reagovať na kliknutie a ovládať menu.</li>
+            </ul>
+        </section>
+
+        <aside class="profile-motto" aria-labelledby="motto-heading">
+            <h2 id="motto-heading">Moje motto pri učení</h2>
+            <p>„Vibecode till you make it.“</p>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <address>
+                Napíšte mi: <a href="mailto:rh@example.com">rh@example.com</a>
+            </address>
+            <p>© 2026 RH</p>
+        </div>
+    </footer>
 </body>
-</html> 
+</html>
