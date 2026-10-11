@@ -1,6 +1,7 @@
 # Moja online vizitka
 
 Osobny web RH vytvoreny pomocou HTML, CSS a JavaScriptu.
+Richard Helmeczy WEBTE 1 - https://webte1.fei.stuba.sk/~xhelmeczy/index.html
 
 ## Mapa a pocasie
 
@@ -21,6 +22,8 @@ Osobny web RH vytvoreny pomocou HTML, CSS a JavaScriptu.
 ## Zdroje
 
 - `img/workspace.jpg`: fotografia vlastneho pracovneho stola dodana autorom webu (povodny subor `img/Moj stol.jpg`). Fotografia nebola generovana ani upravovana pomocou AI.
+- Johna porka z iternetu daj john pork a ten prvy alebo druhy
+
 
 ## Interaktivny obrazok
 
